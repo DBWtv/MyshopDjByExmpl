@@ -3,12 +3,15 @@ from django.views.decorators.http import require_POST
 from shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
+import time
 
 @require_POST
 def cart_add(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id = product_id)
     form = CartAddProductForm(request.POST)
+    # special timer for emulate long server response
+    time.sleep(15)
     if form.is_valid():
         cd = form.cleaned_data
         cart.add(product=product,
