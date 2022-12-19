@@ -54,6 +54,8 @@ MIDDLEWARE = [
 
 CART_SESSION_ID = 'cart'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ROOT_URLCONF = 'myshop.urls'
 
 MEDIA_URL = '/media/'
