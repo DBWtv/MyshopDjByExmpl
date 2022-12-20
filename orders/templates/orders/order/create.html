@@ -19,9 +19,9 @@
       {% endfor %}
       {% if cart.coupon %}
         <li>
-          {% block trans with code=cart.coupon.code discount=cart.coupon.discount %}
+          {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
             "{{ code }}" ({{ discount }}% off)
-          {% endblock trans %}
+          {% endblocktrans %}
           <span>- ${{ cart.get_discount|floatformat:"2" }}</span>
         </li>
       {% endif %}
