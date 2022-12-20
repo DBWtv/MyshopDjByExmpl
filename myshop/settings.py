@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
     'django.contrib.admin',
+    'coupons.apps.CouponsConfig',
 ]
 
 MIDDLEWARE = [
